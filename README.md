@@ -10,7 +10,7 @@ then run
 
 and login with your voiceworks credentials (username is the start of you email).
 
-The you can run npm install to install all the packages.
+The you can run `npm install` to install all the packages.
 
 For any errors visit the Enreach CCL Feedback channel on slack (CCC-Feedback)
 
