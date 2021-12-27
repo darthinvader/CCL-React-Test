@@ -1,3 +1,19 @@
+# Installing Core Component Library
+
+To install core component library run:
+
+`npm config set @enreach:registry https://nexus.voiceworks.com/repository/npm-enreach-private/`
+
+then run
+
+`npm login --registry=https://nexus.voiceworks.com/repository/npm-enreach-private/`
+
+and login with your voiceworks credentials (username is the start of you email).
+
+The you can run npm install to install all the packages.
+
+For any errors visit the Enreach CCL Feedback channel on slack (CCC-Feedback)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
