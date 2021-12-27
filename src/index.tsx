@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrandLibrary } from "@enreach/brand-library";
-
+import "./reset.css";
 new BrandLibrary().setBrand("Enreach");
 
 ReactDOM.render(
