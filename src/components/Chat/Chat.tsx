@@ -23,6 +23,8 @@ const Chat: React.FC<Props> = ({
     backgroundColor: "white",
     display: "flex",
     flexDirection: "column",
+    borderRadius: "35px",
+    overflow: "hidden",
     ...outerStyle,
   };
 
