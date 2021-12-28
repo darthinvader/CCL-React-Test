@@ -13,7 +13,7 @@ const ChatBubble: React.FC<Props> = ({ style, children }) => {
     alignSelf: "start",
     color: "white",
     fontSize: "20px",
-    maxWidth: "250px",
+    maxWidth: "75%",
     ...style,
   };
   return <div style={style}>{children}</div>;

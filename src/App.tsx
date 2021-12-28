@@ -1,4 +1,4 @@
-import { ClTextField } from "@enreach/core-component-library-react";
+import { ClToast } from "@enreach/core-component-library-react";
 import Chat from "./components/Chat/Chat";
 import ChatBubble from "./components/Chat/ChatBubble";
 import ChatInput from "./components/Chat/ChatInput";
@@ -17,7 +17,20 @@ function App() {
         alignItems: "center",
       }}
     >
-      <Chat input={<ChatInput></ChatInput>}>
+      <Chat
+        input={<ChatInput></ChatInput>}
+        toasts={
+          <ClToast
+            style={{
+              position: "absolute",
+              right: "50%",
+              transform: "translateX(50%)",
+            }}
+            text="HELLO"
+            duration={1000}
+          />
+        }
+      >
         <ChatBubble>{"Hello"}</ChatBubble>
         <ChatBubble>
           {

@@ -4,20 +4,23 @@ interface Props {
   scrollerStyle?: React.CSSProperties;
   innerStyle?: React.CSSProperties;
   outerStyle?: React.CSSProperties;
-  children: React.ReactNode;
   topBar?: React.ReactNode;
   input?: React.ReactNode;
+  toasts?: React.ReactNode | React.ReactNode[];
+  children: React.ReactNode;
 }
 
 const Chat: React.FC<Props> = ({
   scrollerStyle,
   innerStyle,
   outerStyle,
-  children,
   topBar,
   input,
+  toasts,
+  children,
 }) => {
   outerStyle = {
+    position: "relative",
     height: "700px",
     width: "350px",
     backgroundColor: "white",
@@ -46,6 +49,7 @@ const Chat: React.FC<Props> = ({
 
   return (
     <div style={outerStyle}>
+      {toasts}
       {topBar}
       <ClScrollWrapper style={scrollerStyle}>
         <div style={innerStyle}>{children}</div>

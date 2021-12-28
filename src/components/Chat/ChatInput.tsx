@@ -1,4 +1,7 @@
-import { ClTextField } from "@enreach/core-component-library-react";
+import {
+  ClIconButton,
+  ClTextField,
+} from "@enreach/core-component-library-react";
 
 interface Props {
   style?: React.CSSProperties;
@@ -6,18 +9,28 @@ interface Props {
 
 const ChatInput: React.FC<Props> = ({ style }) => {
   style = {
-    justifySelf: "flex-end",
-    maxHeight: "50px",
-    flex: "1 1 auto",
-    marginBottom: "40px",
+    // width: "80%",
     ...style,
   };
   return (
-    <ClTextField
-      type="text"
-      placeholder="Type In A Response"
-      style={style}
-    ></ClTextField>
+    <div
+      style={{
+        display: "flex",
+        justifySelf: "flex-end",
+        alignItems: "center",
+        justifyItems: "center",
+        margin: 8,
+        maxHeight: "50px",
+        flex: "1 1 auto",
+      }}
+    >
+      {/* <ClIconButton icon-name="communication--device--phone"></ClIconButton> */}
+      <ClTextField
+        type="text"
+        placeholder="Type In A Response"
+        style={style}
+      ></ClTextField>
+    </div>
   );
 };
 export default ChatInput;
