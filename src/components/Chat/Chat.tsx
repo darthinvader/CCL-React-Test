@@ -23,25 +23,17 @@ const Chat: React.FC<Props> = ({
     backgroundColor: "white",
     display: "flex",
     flexDirection: "column",
+    alignItems: "center",
     borderRadius: "35px",
     overflow: "hidden",
     ...outerStyle,
   };
 
-  scrollerStyle = {
-    overflowX: "hidden",
-    ...scrollerStyle,
-  };
   innerStyle = {
-    position: "relative",
     display: "flex",
-    height: "700px",
-    width: "350px",
     flexDirection: "column-reverse",
-    justifyContent: "flex-end",
-    alignItems: "start",
     padding: "10px 20px",
-    gap: "16px",
+    gap: "12px",
     ...innerStyle,
   };
 

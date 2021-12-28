@@ -16,7 +16,7 @@ function App() {
         alignItems: "center",
       }}
     >
-      <Chat input={<ChatInput style={{ alignSelf: "center" }}></ChatInput>}>
+      <Chat input={<ChatInput></ChatInput>}>
         <ChatBubble>{"Hello"}</ChatBubble>
         <ChatBubble>
           {
