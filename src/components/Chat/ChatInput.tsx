@@ -5,9 +5,19 @@ interface Props {
 }
 
 const ChatInput: React.FC<Props> = ({ style }) => {
-  style = { ...style };
+  style = {
+    justifySelf: "flex-end",
+    maxHeight: "50px",
+    flex: "1 1 auto",
+    marginBottom: "40px",
+    ...style,
+  };
   return (
-    <ClTextField placeholder="Type In A Response" style={style}></ClTextField>
+    <ClTextField
+      type="text"
+      placeholder="Type In A Response"
+      style={style}
+    ></ClTextField>
   );
 };
 export default ChatInput;

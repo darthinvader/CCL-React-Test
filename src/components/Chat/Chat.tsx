@@ -29,10 +29,17 @@ const Chat: React.FC<Props> = ({
     ...outerStyle,
   };
 
+  scrollerStyle = {
+    flex: "1 1 auto",
+    width: "100%",
+    padding: 0,
+  };
+
   innerStyle = {
+    width: "100",
     display: "flex",
     flexDirection: "column-reverse",
-    padding: "10px 20px",
+    padding: "8px 6px 8px 16px",
     gap: "12px",
     ...innerStyle,
   };
