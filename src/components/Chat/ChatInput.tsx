@@ -5,6 +5,9 @@ interface Props {
 }
 
 const ChatInput: React.FC<Props> = ({ style }) => {
-  return <ClTextField style={style}></ClTextField>;
+  style = { ...style };
+  return (
+    <ClTextField placeholder="Type In A Response" style={style}></ClTextField>
+  );
 };
 export default ChatInput;

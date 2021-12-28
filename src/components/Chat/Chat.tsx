@@ -3,19 +3,35 @@ import { ClScrollWrapper } from "@enreach/core-component-library-react";
 interface Props {
   scrollerStyle?: React.CSSProperties;
   innerStyle?: React.CSSProperties;
+  outerStyle?: React.CSSProperties;
   children: React.ReactNode;
+  topBar?: React.ReactNode;
+  input?: React.ReactNode;
 }
 
-const Chat: React.FC<Props> = ({ scrollerStyle, innerStyle, children }) => {
-  scrollerStyle = {
+const Chat: React.FC<Props> = ({
+  scrollerStyle,
+  innerStyle,
+  outerStyle,
+  children,
+  topBar,
+  input,
+}) => {
+  outerStyle = {
     height: "700px",
     width: "350px",
     backgroundColor: "white",
-    overflowX: "hidden",
     display: "flex",
+    flexDirection: "column",
+    ...outerStyle,
+  };
+
+  scrollerStyle = {
+    overflowX: "hidden",
     ...scrollerStyle,
   };
   innerStyle = {
+    position: "relative",
     display: "flex",
     height: "700px",
     width: "350px",
@@ -28,9 +44,13 @@ const Chat: React.FC<Props> = ({ scrollerStyle, innerStyle, children }) => {
   };
 
   return (
-    <ClScrollWrapper style={scrollerStyle}>
-      <div style={innerStyle}>{children}</div>
-    </ClScrollWrapper>
+    <div style={outerStyle}>
+      {topBar}
+      <ClScrollWrapper style={scrollerStyle}>
+        <div style={innerStyle}>{children}</div>
+      </ClScrollWrapper>
+      {input}
+    </div>
   );
 };
 
