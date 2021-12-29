@@ -2,6 +2,8 @@ import { ClToast } from "@enreach/core-component-library-react";
 import Chat from "./components/Chat/Chat";
 import ChatBubble from "./components/Chat/ChatBubble";
 import ChatInput from "./components/Chat/ChatInput";
+import Topbar from "./components/Chat/Topbar";
+
 function App() {
   return (
     <div
@@ -18,6 +20,7 @@ function App() {
       }}
     >
       <Chat
+        topBar={<Topbar></Topbar>}
         input={<ChatInput></ChatInput>}
         toasts={
           <ClToast

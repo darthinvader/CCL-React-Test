@@ -1,6 +1,8 @@
 /* CSS Mini Reset */
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 

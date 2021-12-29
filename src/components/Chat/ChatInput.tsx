@@ -9,7 +9,6 @@ interface Props {
 
 const ChatInput: React.FC<Props> = ({ style }) => {
   style = {
-    // width: "80%",
     ...style,
   };
   return (
